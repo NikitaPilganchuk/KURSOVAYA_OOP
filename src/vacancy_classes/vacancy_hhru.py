@@ -17,12 +17,15 @@ class VacancyHHru(Vacancy):
     def print_vacancies(self):
         with open('../vacancies_HHru.json', 'r', encoding='utf-8') as f:
             vacancies_list = json.load(f)
+            vacancies_list = sorted(vacancies_list, key=lambda x: x['Зарплата'])
+            num = 1
             for vacancy in vacancies_list:
-                print(f'Вакансия No {vacancy["Вакансия No"]}')
+                print(f'Вакансия No {num}')
                 print(f"Должность: {vacancy['Должность']}")
                 print(f"Зарплата {vacancy['Зарплата']}")
                 print(f"Требования: {vacancy['Требования']}")
                 print(f"Обязанности: \n{vacancy['Обязанности']}")
                 print()
+                num += 1
 
 
