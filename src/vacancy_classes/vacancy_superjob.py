@@ -1,7 +1,7 @@
 import json
 from KURSOVAYA_OOP.src.vacancy_classes.vacancy import Vacancy
 
-class VacancyHHru(Vacancy):
+class VacancySJ(Vacancy):
 
     def __init__(self):
         self.params = {
@@ -13,16 +13,13 @@ class VacancyHHru(Vacancy):
             # 'experience': None,
         }
 
-
     def print_vacancies(self):
-        with open('../vacancies_HHru.json', 'r', encoding='utf-8') as f:
+        with open('../vacancies_super_job.json', 'r', encoding='utf-8') as f:
             vacancies_list = json.load(f)
             for vacancy in vacancies_list:
                 print(f'Вакансия No {vacancy["Вакансия No"]}')
                 print(f"Должность: {vacancy['Должность']}")
-                print(f"Зарплата {vacancy['Зарплата']}")
-                print(f"Требования: {vacancy['Требования']}")
+                print(f"Зарплата от {vacancy['Зарплата от']} до {vacancy['Зарплата до']}")
+                print(f"Ссылка: {vacancy['Ссылка']}")
                 print(f"Обязанности: \n{vacancy['Обязанности']}")
                 print()
-
-
