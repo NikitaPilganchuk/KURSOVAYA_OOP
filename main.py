@@ -1,5 +1,5 @@
-from src.super_job_api import SuperjobAPI
-from src.head_hunter_api import HeadHunterAPI
+from KURSOVAYA_OOP.src.api_classes.super_job_api import SuperjobAPI
+from KURSOVAYA_OOP.src.api_classes.head_hunter_api import HeadHunterAPI
 
 
 
